@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import './App.css';
 
+import { SplitText } from '../components/textAnimation/SplitText';
+
+
+
 function App() {
   const [expression, setExpression] = useState("");
   const [result, setResult] = useState("");
@@ -57,6 +61,35 @@ function App() {
               {btn}
             </button>
           ))}
+        </div>
+
+        <div className='copyright'>
+        <SplitText
+        text="© 2025 Yasyir Masy'al. All rights reserved."
+        className="text_copyright"
+        delay={100}
+        duration={0.6}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+        />
+        <SplitText
+        text="Design & Development by Yasyir Masy'al."
+        className="text_copyright_2"
+        delay={100}
+        duration={0.6}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+        />
         </div>
 
       </div>
